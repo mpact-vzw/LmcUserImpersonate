@@ -2,29 +2,29 @@
 /**
  * User Service
  *
- * Extends ZfcUser's User Service, adding functions related to the impersonation of users.
+ * Extends LmcUser's User Service, adding functions related to the impersonation of users.
  *
  * @created 20130709
  * @author Mark Tudor <code AT icefusion DOT co DOT uk>
  */
 
-namespace ZfcUserImpersonate\Service;
+namespace LmcUserImpersonate\Service;
 
-use Zend\Authentication\Storage\StorageInterface;
-use ZfcUser\Entity\UserInterface;
-use ZfcUser\Service\User as ZfcUserUserService;
-use ZfcUserImpersonate\Exception\Domain as DomainException;
-use ZfcUserImpersonate\Exception\NotImpersonating as NotImpersonatingException;
-use ZfcUserImpersonate\Exception\UserNotFound as UserNotFoundException;
-use ZfcUserImpersonate\Exception\UserNotLoggedIn as UserNotLoggedInException;
+use Laminas\Authentication\Storage\StorageInterface;
+use LmcUser\Entity\UserInterface;
+use LmcUser\Service\User as LmcUserUserService;
+use LmcUserImpersonate\Exception\Domain as DomainException;
+use LmcUserImpersonate\Exception\NotImpersonating as NotImpersonatingException;
+use LmcUserImpersonate\Exception\UserNotFound as UserNotFoundException;
+use LmcUserImpersonate\Exception\UserNotLoggedIn as UserNotLoggedInException;
 
-class User extends ZfcUserUserService
+class User extends LmcUserUserService
 {
     /**
      * The storage container in which the 'impersonator' (real user) is stored whilst they are impersonating another
      * user.
      *
-     * @var \Zend\Authentication\Storage\StorageInterface
+     * @var \Laminas\Authentication\Storage\StorageInterface
      */
     protected $storageForImpersonator;
 
@@ -128,7 +128,7 @@ class User extends ZfcUserUserService
      *
      * Session storage is used by default unless a different storage adapter has been set.
      *
-     * @return \Zend\Authentication\Storage\StorageInterface
+     * @return \Laminas\Authentication\Storage\StorageInterface
      */
     public function getStorageForImpersonator()
     {
@@ -140,8 +140,8 @@ class User extends ZfcUserUserService
      *
      * Session storage is used by default unless a different storage adapter has been set.
      *
-     * @param  \Zend\Authentication\Storage\StorageInterface $storageForImpersonator
-     * @return \ZfcUser\Service\User
+     * @param  \Laminas\Authentication\Storage\StorageInterface $storageForImpersonator
+     * @return \LmcUser\Service\User
      */
     public function setStorageForImpersonator(StorageInterface $storageForImpersonator)
     {
@@ -166,7 +166,7 @@ class User extends ZfcUserUserService
      * Set the setting for storing user to the session as object (rather than ID)
      *
      * @param bool $storeAsObject
-     * @return \ZfcUser\Options\ModuleOptions
+     * @return \LmcUser\Options\ModuleOptions
      */
     public function setStoreUserAsObject($storeAsObject)
     {

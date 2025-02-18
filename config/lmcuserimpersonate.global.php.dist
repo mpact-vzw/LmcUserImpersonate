@@ -1,6 +1,6 @@
 <?php
 /**
- * ZfcUserImpersonate Configuration
+ * LmcUserImpersonate Configuration
  *
  * If you have a ./config/autoload/ directory set up for your project, you can drop this config file in it and change
  * the values as you wish.
@@ -22,7 +22,7 @@ $settings = array(
      *
      * Accepted values: string
      */
-    //'impersonate_redirect_route'   => 'zfcuser',
+    //'impersonate_redirect_route'   => 'lmcuser',
 
     /**
      * Unimpersonate Redirect Route
@@ -31,7 +31,7 @@ $settings = array(
      *
      * Accepted values: string
      */
-    //'unimpersonate_redirect_route' => 'zfcuser',
+    //'unimpersonate_redirect_route' => 'lmcuser',
 
     /**
      * Store user to session as object (true) or id (false)
@@ -48,5 +48,5 @@ $settings = array(
  * You do not need to edit below this line
  */
 return array(
-    'zfcuserimpersonate' => $settings,
+    'lmcuserimpersonate' => $settings,
 );

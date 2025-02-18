@@ -6,10 +6,10 @@
  * @author Mark Tudor <code AT icefusion DOT co DOT uk>
  */
 
-namespace ZfcUserImpersonate\Exception;
+namespace LmcUserImpersonate\Exception;
 
-use ZfcUserImpersonate\Exception\ZfcUserImpersonate;
+use LmcUserImpersonate\Exception\LmcUserImpersonate;
 
-class UserNotLoggedIn extends \RuntimeException implements ZfcUserImpersonate
+class UserNotLoggedIn extends \RuntimeException implements LmcUserImpersonate
 {
 }

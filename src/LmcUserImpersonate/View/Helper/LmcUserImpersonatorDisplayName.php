@@ -1,6 +1,6 @@
 <?php
 /**
- * ZfcUserImpersonatorDisplayName View Helper
+ * LmcUserImpersonatorDisplayName View Helper
  *
  * Returns a string containing the display name of the 'real user' if impersonation is currently in progress, otherwise
  * returns false.
@@ -9,20 +9,20 @@
  * @author Mark Tudor <code AT icefusion DOT co DOT uk>
  */
 
-namespace ZfcUserImpersonate\View\Helper;
+namespace LmcUserImpersonate\View\Helper;
 
-use Zend\View\Helper\AbstractHelper;
-use ZfcUser\Entity\UserInterface;
-use ZfcUser\Service\User as UserService;
-use ZfcUser\View\Helper\ZfcUserDisplayName;
-use ZfcUserImpersonate\Exception\Domain as DomainException;
+use Laminas\View\Helper\AbstractHelper;
+use LmcUser\Entity\UserInterface;
+use LmcUser\Service\User as UserService;
+use LmcUser\View\Helper\LmcUserDisplayName;
+use LmcUserImpersonate\Exception\Domain as DomainException;
 
-class ZfcUserImpersonatorDisplayName extends ZfcUserDisplayName
+class LmcUserImpersonatorDisplayName extends LmcUserDisplayName
 {
     /**
      * The user service.
      *
-     * @var \ZfcUser\Service\User
+     * @var \LmcUser\Service\User
      */
     protected $userService;
 
@@ -30,7 +30,7 @@ class ZfcUserImpersonatorDisplayName extends ZfcUserDisplayName
      * __invoke returns a string containing the display name of the 'real user' if impersonation is currently in
      * progress, otherwise returns false.
      *
-     * The bulk of the work is delegated to the ZfcUserDisplayName view helper.
+     * The bulk of the work is delegated to the LmcUserDisplayName view helper.
      *
      * @return String
      */
@@ -53,14 +53,14 @@ class ZfcUserImpersonatorDisplayName extends ZfcUserDisplayName
             return false;
         }
 
-        // The bulk of the work is delegated to the ZfcUserDisplayName view helper.
+        // The bulk of the work is delegated to the LmcUserDisplayName view helper.
         return parent::__invoke($realUser);
     }
 
     /**
      * Get the user service.
      *
-     * @return ZfcUser\Service\User
+     * @return LmcUser\Service\User
      */
     public function getUserService()
     {
@@ -70,7 +70,7 @@ class ZfcUserImpersonatorDisplayName extends ZfcUserDisplayName
     /**
      * Set the user service.
      *
-     * @param \ZfcUser\Service\User $userService
+     * @param \LmcUser\Service\User $userService
      */
     public function setUserService(UserService $userService)
     {

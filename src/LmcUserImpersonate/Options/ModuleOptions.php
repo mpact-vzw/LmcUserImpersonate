@@ -1,8 +1,8 @@
 <?php
 
-namespace ZfcUserImpersonate\Options;
+namespace LmcUserImpersonate\Options;
 
-use Zend\Stdlib\AbstractOptions;
+use Laminas\Stdlib\AbstractOptions;
 
 class ModuleOptions extends AbstractOptions
 {
@@ -18,14 +18,14 @@ class ModuleOptions extends AbstractOptions
      *
      * @var string
      */
-    protected $impersonateRedirectRoute = 'zfcuser';
+    protected $impersonateRedirectRoute = 'lmcuser';
 
     /**
      * The name of the route to which the user is redirected after ending an impersonation.
      *
      * @var string
      */
-    protected $unimpersonateRedirectRoute = 'zfcuser';
+    protected $unimpersonateRedirectRoute = 'lmcuser';
 
     /**
      * Store user to session as object (true) or id (false). Set to false if you want
@@ -49,7 +49,7 @@ class ModuleOptions extends AbstractOptions
      * Set the route parameter name which will contain the user id of the user to be impersonated.
      *
      * @param string $userIdRouteParameter
-     * @return \ZfcUser\Options\ModuleOptions
+     * @return \LmcUser\Options\ModuleOptions
      */
     public function setUserIdRouteParameter($userIdRouteParameter)
     {
@@ -73,7 +73,7 @@ class ModuleOptions extends AbstractOptions
      * Set the name of the route to which the user is redirected after starting an impersonation.
      *
      * @param string $impersonateRedirectRoute
-     * @return \ZfcUser\Options\ModuleOptions
+     * @return \LmcUser\Options\ModuleOptions
      */
     public function setImpersonateRedirectRoute($impersonateRedirectRoute)
     {
@@ -97,7 +97,7 @@ class ModuleOptions extends AbstractOptions
      * Set the name of the route to which the user is redirected after ending an impersonation.
      *
      * @param string $unimpersonateRedirectRoute
-     * @return \ZfcUser\Options\ModuleOptions
+     * @return \LmcUser\Options\ModuleOptions
      */
     public function setUnimpersonateRedirectRoute($unimpersonateRedirectRoute)
     {
@@ -121,7 +121,7 @@ class ModuleOptions extends AbstractOptions
      * Set the setting for storing user to the session as object (rather than ID)
      *
      * @param bool $storeAsObject
-     * @return \ZfcUser\Options\ModuleOptions
+     * @return \LmcUser\Options\ModuleOptions
      */
     public function setStoreUserAsObject($storeAsObject)
     {

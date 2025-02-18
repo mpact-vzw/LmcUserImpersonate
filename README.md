@@ -1,4 +1,4 @@
-ZfcUserImpersonate
+LmcUserImpersonate
 ==================
 
-An extension module for ZfcUser which allows one user to "impersonate" another. Useful for troubleshooting and support.
+An extension module for LmcUser which allows one user to "impersonate" another. Useful for troubleshooting and support.

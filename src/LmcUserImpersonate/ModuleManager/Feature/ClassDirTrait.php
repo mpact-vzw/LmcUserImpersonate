@@ -1,6 +1,6 @@
 <?php
 
-namespace ZfcUserImpersonate\ModuleManager\Feature;
+namespace LmcUserImpersonate\ModuleManager\Feature;
 
 trait ClassDirTrait
 {

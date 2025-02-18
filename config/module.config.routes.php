@@ -1,6 +1,6 @@
 <?php
 /**
- * ZfcUserImpersonate Module Route Configuration
+ * LmcUserImpersonate Module Route Configuration
  *
  * @created 20131010
  * @author Mark Tudor <code AT icefusion DOT co DOT uk>
@@ -9,7 +9,7 @@
 return array(
     'router' => array(
         'routes' => array(
-            'zfcuserimpersonate' => array(
+            'lmcuserimpersonate' => array(
                 'type' => 'Literal',
                 'options' => array(
                     'route' => '/admin/user',
@@ -21,7 +21,7 @@ return array(
                         'options' => array(
                             'route' => '/impersonate/:userId',
                             'defaults' => array(
-                                'controller' => 'zfcuserimpersonate_adminController',
+                                'controller' => 'lmcuserimpersonate_adminController',
                                 'action'     => 'impersonateUser',
                             ),
                         ),
@@ -31,7 +31,7 @@ return array(
                         'options' => array(
                             'route' => '/unimpersonate',
                             'defaults' => array(
-                                'controller' => 'zfcuserimpersonate_adminController',
+                                'controller' => 'lmcuserimpersonate_adminController',
                                 'action'     => 'unimpersonateUser',
                             ),
                         ),

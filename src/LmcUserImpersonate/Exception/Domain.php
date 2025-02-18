@@ -6,10 +6,10 @@
  * @author Mark Tudor <code AT icefusion DOT co DOT uk>
  */
 
-namespace ZfcUserImpersonate\Exception;
+namespace LmcUserImpersonate\Exception;
 
-use ZfcUser\Exception\DomainException;
+use LmcUser\Exception\DomainException;
 
-class Domain extends DomainException implements ZfcUserImpersonate
+class Domain extends DomainException implements LmcUserImpersonate
 {
 }

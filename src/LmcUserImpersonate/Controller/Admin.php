@@ -6,23 +6,23 @@
  * @author Mark Tudor <code AT icefusion DOT co DOT uk>
  */
 
-namespace ZfcUserImpersonate\Controller;
+namespace LmcUserImpersonate\Controller;
 
-use Zend\Mvc\Controller\AbstractActionController;
+use Laminas\Mvc\Controller\AbstractActionController;
 
 class Admin extends AbstractActionController
 {
     /**
      * The options for this module.
      *
-     * @var \ZfcUser\Options\ModuleOptions
+     * @var \LmcUser\Options\ModuleOptions
      */
     protected $config;
 
     /**
      * The user service which provides the impersonation functions.
      *
-     * @var \ZfcUser\Service\User
+     * @var \LmcUser\Service\User
      */
     protected $userService;
 
@@ -67,7 +67,7 @@ class Admin extends AbstractActionController
     /**
      * Get the current module configuration.
      *
-     * @return \ZfcUser\Options\ModuleOptions
+     * @return \LmcUser\Options\ModuleOptions
      */
     public function getConfig()
     {
@@ -77,8 +77,8 @@ class Admin extends AbstractActionController
     /**
      * Set the module configuration.
      *
-     * @param \ZfcUser\Options\ModuleOptions $config
-     * @return \ZfcUserImpersonate\Controller\Admin
+     * @param \LmcUser\Options\ModuleOptions $config
+     * @return \LmcUserImpersonate\Controller\Admin
      */
     public function setConfig($config)
     {
@@ -99,8 +99,8 @@ class Admin extends AbstractActionController
     /**
      * Set the user service.
      *
-     * @param \ZfcUser\Service\User $userService
-     * @return \ZfcUserImpersonate\Controller\Admin
+     * @param \LmcUser\Service\User $userService
+     * @return \LmcUserImpersonate\Controller\Admin
      */
     public function setUserService($userService)
     {

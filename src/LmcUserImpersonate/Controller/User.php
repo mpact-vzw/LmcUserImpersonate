@@ -6,17 +6,17 @@
  * @author Mark Tudor <code AT icefusion DOT co DOT uk>
  */
 
-namespace ZfcUserImpersonate\Controller;
+namespace LmcUserImpersonate\Controller;
 
-use ZfcUser\Controller\UserController as ZfcUserUserController;
+use LmcUser\Controller\UserController as LmcUserUserController;
 
-class User extends ZfcUserUserController
+class User extends LmcUserUserController
 {
     /**
      * Logout and clear the identity of the current user, including identities associated with impersonating another
      * user.
      *
-     * @see \ZfcUser\Controller\UserController::logoutAction()
+     * @see \LmcUser\Controller\UserController::logoutAction()
      */
     public function logoutAction()
     {
@@ -24,7 +24,7 @@ class User extends ZfcUserUserController
         // 'real user' identity.
         $this->getUserService()->getStorageForImpersonator()->clear();
 
-        // Perform the rest of the logout action using ZfcUser functionality.
+        // Perform the rest of the logout action using LmcUser functionality.
         return parent::logoutAction();
     }
 }

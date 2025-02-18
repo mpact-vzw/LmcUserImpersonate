@@ -1,24 +1,24 @@
 <?php
 /**
- * ZfcUserImpersonate View Helper Config
+ * LmcUserImpersonate View Helper Config
  *
  * @created 20131010
  * @author Mark Tudor <code AT icefusion DOT co DOT uk>
  */
 
-use ZfcUserImpersonate\View\Helper\ZfcUserImpersonatorDisplayName;
-use ZfcUserImpersonate\View\Helper\ZfcUserImpersonatorIdentity;
+use LmcUserImpersonate\View\Helper\LmcUserImpersonatorDisplayName;
+use LmcUserImpersonate\View\Helper\LmcUserImpersonatorIdentity;
 
 return array(
     'factories' => array(
-        'zfcUserImpersonatorDisplayName' => function ($hm) {
-            $viewHelper = new ZfcUserImpersonatorDisplayName();
-            $viewHelper->setUserService($hm->getServiceLocator()->get('zfcuserimpersonate_user_service'));
+        'lmcUserImpersonatorDisplayName' => function ($hm) {
+            $viewHelper = new LmcUserImpersonatorDisplayName();
+            $viewHelper->setUserService($hm->getServiceLocator()->get('lmcuserimpersonate_user_service'));
             return $viewHelper;
         },
-        'zfcUserImpersonatorIdentity' => function ($hm) {
-            $viewHelper = new ZfcUserImpersonatorIdentity();
-            $viewHelper->setUserService($hm->getServiceLocator()->get('zfcuserimpersonate_user_service'));
+        'lmcUserImpersonatorIdentity' => function ($hm) {
+            $viewHelper = new LmcUserImpersonatorIdentity();
+            $viewHelper->setUserService($hm->getServiceLocator()->get('lmcuserimpersonate_user_service'));
             return $viewHelper;
         },
     ),

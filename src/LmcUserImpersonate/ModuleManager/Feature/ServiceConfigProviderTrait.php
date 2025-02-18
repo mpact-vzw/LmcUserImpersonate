@@ -1,8 +1,8 @@
 <?php
 
-namespace ZfcUserImpersonate\ModuleManager\Feature;
+namespace LmcUserImpersonate\ModuleManager\Feature;
 
-use \Zend\Stdlib\ArrayUtils;
+use \Laminas\Stdlib\ArrayUtils;
 
 trait ServiceConfigProviderTrait
 {
