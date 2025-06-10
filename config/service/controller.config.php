@@ -11,7 +11,7 @@ use LmcUserImpersonate\Controller;
 return array(
     'factories' => array(
         'lmcuserimpersonate_adminController' => function ($cm) {
-            $sm = $cm->getServiceLocator();
+            $sm = $cm;
 
             $adminController = new Controller\Admin();
             $adminController->setConfig($sm->get('lmcuserimpersonate_module_options'));
@@ -21,13 +21,14 @@ return array(
         },
         'lmcuser' => function($cm) {
             /* @var ControllerManager $cm*/
-            $serviceManager = $cm->getServiceLocator();
+            $serviceManager = $cm;
 
             /* @var RedirectCallback $redirectCallback */
             $redirectCallback = $serviceManager->get('lmcuser_redirect_callback');
 
             /* @var UserController $controller */
             $controller = new Controller\User($redirectCallback);
+            $controller->setServiceLocator($serviceManager);
 
             return $controller;
         },
