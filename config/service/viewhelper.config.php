@@ -13,12 +13,12 @@ return array(
     'factories' => array(
         'lmcUserImpersonatorDisplayName' => function ($hm) {
             $viewHelper = new LmcUserImpersonatorDisplayName();
-            $viewHelper->setUserService($hm->getServiceLocator()->get('lmcuserimpersonate_user_service'));
+            $viewHelper->setUserService($hm->get('lmcuserimpersonate_user_service'));
             return $viewHelper;
         },
         'lmcUserImpersonatorIdentity' => function ($hm) {
             $viewHelper = new LmcUserImpersonatorIdentity();
-            $viewHelper->setUserService($hm->getServiceLocator()->get('lmcuserimpersonate_user_service'));
+            $viewHelper->setUserService($hm->get('lmcuserimpersonate_user_service'));
             return $viewHelper;
         },
     ),
